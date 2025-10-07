@@ -24,7 +24,6 @@ def pick_num(winnum, low, high):
     """This function makes the user pick the number and if its the winning number it will print the results, if not it will ask again"""
     tries = 0
     while True:
-        print(winnum)
         try:
             choice = int(input("Pick a number 0 - 100: "))
         except:
@@ -60,6 +59,7 @@ def ai_pick_number(tries, winnum, low, high):
             low = middle
         elif winnum == middle:
             results(tries, winnum, ai_tries)
+            break
         
 def main():
     low = 0
